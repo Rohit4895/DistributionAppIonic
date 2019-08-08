@@ -4,49 +4,59 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'invoices',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../pages/invoices/invoices.module').then(m => m.InvoicesPageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'inventory',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../pages/inventory/inventory.module').then(m => m.InventoryPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'purchase-orders',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../pages/purchase-orders/purchase-orders.module').then(m => m.PurchaseOrdersPageModule)
+          }
+        ]
+      },
+      {
+        path: 'settings',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../pages/settings/settings.module').then(m => m.SettingsPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/invoices',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/invoices',
     pathMatch: 'full'
   }
 ];
