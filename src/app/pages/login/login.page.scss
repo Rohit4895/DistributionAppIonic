@@ -1,8 +1,23 @@
 .backImage{
     height: 50%;
     width: 100%;
+    object-fit: cover;
 }
 
-.floatingCard{
-    
+.loginForm {
+    background-color: white;
+    border-radius: 0px;
+    position: fixed;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
+
+.lower-content {
+    position: fixed;
+    left: 0;
+    bottom: 70px;
+    right: 0px;
+    font-size: 150%;
+  }

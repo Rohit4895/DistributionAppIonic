@@ -1,23 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
+  <ion-toolbar color="warning">
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="backImage">
-      <ion-img  src="./assets/background.jpeg"></ion-img>
-  </div>
-<div class="floatingCard">
-    <ion-card align-items-center>
-        <ion-card-header>
-          <ion-card-title>Welcome Back</ion-card-title>
-        </ion-card-header>
-      
+      <ion-img class="backImage"  src="./assets/background.jpeg"></ion-img>
+
+    <ion-card text-center class="loginForm">
         <ion-card-content>
-         
+         <ion-list>
+           <ion-text>
+              <ion-card-title color="warning" >Welcome Back</ion-card-title>
+           </ion-text>
+           <ion-item>
+             <ion-input type="text"></ion-input>
+           </ion-item>
+           <ion-item>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+          
+            <ion-button color="warning" margin-top>Login</ion-button>
+            
+       
+         </ion-list>
         </ion-card-content>
       </ion-card>
-</div>
+
+      <ion-text text-center color="warning" class="lower-content">Forgot Password?</ion-text>
+
 
 </ion-content>
