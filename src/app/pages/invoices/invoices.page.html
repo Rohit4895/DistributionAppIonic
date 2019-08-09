@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Invoices</ion-title>
+      <ion-title>Invoices</ion-title>
   </ion-toolbar>
+</ion-header>
+<ion-header>
+    <ion-toolbar text-center>
+        <ion-grid class="btnGrid">
+          <ion-row style="border-radius: 5px;  outline-color: #feae2a;">
+            <ion-col class="open" (click)="onButtonClick('open')" [ngStyle]="{'background-color': buttonBackOpenColor, 
+            'color': buttonTextOpenColor}">
+                <ion-label >Open</ion-label>
+            </ion-col>
+            <ion-col class="completed" (click)="onButtonClick('completed')" [ngStyle]="{'background-color': buttonBackCompletedColor,
+             'color': buttonTextCompletedColor}">
+              <ion-label >Completed</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-searchbar class="searchBar"></ion-searchbar>
+        <ion-text style="margin-right: 10%;" class="textMargin">INVOICE#</ion-text>
+        <ion-text style="margin-right: 10%;" class="textMargin">DUE DATE</ion-text>
+        <ion-text class="textMargin">CREATED BY</ion-text>
+      </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+          <ion-list>
+              <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]">
+                <ion-text style="margin-right: 10%;">
+                  INV-009090
+                </ion-text>
+                <ion-text style="margin-right: 10%;"> 09/13/2019</ion-text>
+                <ion-icon slot="end" name="arrow-forward" class="forwardIcon"></ion-icon>
+              </ion-item>
+            </ion-list>
+            <ion-button class="scanInvoice" expand="full" color="warning">
+              <ion-label style="font-size: 100%;">Scan Invoice</ion-label>
+            </ion-button>
 </ion-content>

@@ -1,0 +1,43 @@
+.btnGrid{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 5px;
+    padding: 1px;
+    background-color: #feae2a;
+   
+}
+
+.open{
+    background-color: #feae2a;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: white;
+}
+
+.completed{
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #feae2a;
+}
+
+.searchBar{
+    border-radius: 0%;
+}
+
+.textMargin{
+   color: #feae2a;
+}
+
+.forwardIcon{
+    color: #D3D3D3;
+}
+
+.scanInvoice{
+        position: fixed;
+        left: 0;
+        bottom: -5px;
+        right: 0px;
+        font-size: 100%;
+}
